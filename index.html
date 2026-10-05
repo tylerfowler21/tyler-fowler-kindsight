@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tyler Fowler — Community Foundations</title>
+<meta name="description" content="A short brief from Tyler Fowler for the Enterprise Account Executive, Community Foundations seat at Kindsight.">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --ink: #1d1c1a;
+    --muted: #5f5c55;
+    --rule: #dcd8cf;
+    --accent: #2f5a4e;
+    --card: #efece5;
+    --serif: "Iowan Old Style", "Charter", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161614;
+      --ink: #ebe8e1;
+      --muted: #a29e95;
+      --rule: #34322e;
+      --accent: #8cc2b0;
+      --card: #1f1f1c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.1875rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 42rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  header { padding: 5.5rem 0 3.5rem; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+  }
+  h1 {
+    font-size: clamp(2.6rem, 8vw, 3.75rem);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.75rem;
+  }
+  .role { font-size: 1.3rem; line-height: 1.4; margin: 0 0 2rem; color: var(--ink); }
+  .role span { color: var(--muted); }
+  .lede { color: var(--muted); margin: 0; }
+
+  section { padding: 4rem 0 1rem; }
+  .num {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  h2 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 2.25rem 0 0.5rem;
+  }
+  p { margin: 0 0 1.15rem; }
+  ul, ol { margin: 0 0 1.25rem; padding-left: 1.25rem; }
+  li { margin-bottom: 0.6rem; }
+  li::marker { color: var(--muted); }
+  strong { font-weight: 600; }
+
+  .plain {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    padding: 1.1rem 1.25rem;
+    margin: 1.75rem 0;
+  }
+  .plain p:last-child { margin-bottom: 0; }
+
+  .week { list-style: none; padding: 0; margin: 0 0 1.25rem; border-top: 1px solid var(--rule); }
+  .week li {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .week b { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; padding-top: 0.2rem; }
+  .note { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); }
+
+  .questions { counter-reset: q; list-style: none; padding: 0; }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .questions .why { display: block; font-size: 1rem; color: var(--muted); margin-top: 0.25rem; }
+
+  .cycle { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+  .cycle li {
+    position: relative;
+    padding: 0 0 1.25rem 1.75rem;
+    margin: 0;
+    border-left: 1px solid var(--rule);
+    margin-left: 0.35rem;
+  }
+  .cycle li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .cycle li::before {
+    content: "";
+    position: absolute;
+    left: -0.4rem;
+    top: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+  }
+  .cycle b { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; display: block; }
+  .cycle span { color: var(--muted); font-size: 1.05rem; }
+
+  footer {
+    margin-top: 4.5rem;
+    padding: 2rem 0 3.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 0.35rem; }
+
+  @media (max-width: 480px) {
+    body { font-size: 1.125rem; }
+    header { padding: 3.5rem 0 2.5rem; }
+    section { padding-top: 3rem; }
+    h2 { font-size: 1.6rem; }
+    .week li { grid-template-columns: 1fr; gap: 0.15rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Brief for Jas Saraw and Andy Suther</p>
+  <h1>Tyler Fowler</h1>
+  <p class="role">Enterprise Account Executive, Community Foundations<br><span>Kindsight</span></p>
+  <p class="lede">Why I fit this seat, and how I would work it in the first 90 days.</p>
+</header>
+
+<section id="why">
+  <p class="num">01</p>
+  <h2>Why this seat</h2>
+  <p>This is a hunter role on new ground. Community foundations are a new vertical for Kindsight, the offer is new, and the references and playbook are thin. That is the part I want. I am not looking to inherit a book of existing customers. I want to be the person who finds the first ones and writes down how it was done.</p>
+
+  <div class="plain">
+    <p><strong>Where I am coming from, plainly.</strong> I work at a family-owned firm that helps companies of about 50 to 500 employees improve their 401(k) plans, educate their employees, and, if they choose, manage participant accounts. I hold a Series 65 and have for about a year. I live in the Charleston, South Carolina area.</p>
+    <p>I have not carried a SaaS quota.</p>
+  </div>
+
+  <h3>What carries over</h3>
+  <ul>
+    <li><strong>Financial decisions with more than one signer.</strong> A retirement plan change is never one person's call. The owner, finance, and HR all have a say, and each cares about something different. I am used to keeping several people moving toward the same yes.</li>
+    <li><strong>The professional-advisor world.</strong> Community foundations grow through relationships with wealth advisors, estate attorneys, and CPAs who bring them donors. I sit on the advisor side of that table today, and I know how those people think about their clients and their own reputation.</li>
+    <li><strong>Talking about money with people who are responsible for someone else's.</strong> Foundation leaders answer to a board and to a community. That is the same posture as a plan sponsor answering to employees.</li>
+  </ul>
+</section>
+
+<section id="pipeline">
+  <p class="num">02</p>
+  <h2>How I would find the first logos</h2>
+  <p>I assume no inbound and no handed-down list. Pipeline is my job, and I would build it myself.</p>
+
+  <h3>The first 90 days</h3>
+  <ul class="week">
+    <li><b>Days 1–30</b><span>Learn the product, the current customers, and how the team sells. Build the account list. Outbound starts by the second week, not the second month.</span></li>
+    <li><b>Days 31–60</b><span>First executive meetings and discovery calls. Tighten the message based on what foundations actually say back.</span></li>
+    <li><b>Days 61–90</b><span>First opportunities moving past discovery, and a written first draft of the community-foundation playbook for whoever comes next.</span></li>
+  </ul>
+
+  <h3>Who I would call</h3>
+  <ul>
+    <li><strong>President or CEO.</strong> Owns the growth plan and the board relationship. The person who decides whether this conversation matters.</li>
+    <li><strong>Head of development or philanthropy.</strong> Lives with the donor pipeline every day. The person who feels the problem first.</li>
+    <li><strong>Head of finance or operations.</strong> Owns the systems and the contracts. The person who will ask how this fits next to what they already run.</li>
+  </ul>
+
+  <h3>Where I would start</h3>
+  <p>A working list of U.S. community foundations, sorted by size, with a note on each about anything that suggests change is coming: a new president or development lead, a campaign announcement, a job posting for prospect research or a CRM administrator, a published strategic plan. Those foundations go to the top.</p>
+
+  <h3>A normal week</h3>
+  <ul class="week">
+    <li><b>Monday</b><span>Research and list building. New accounts added, the right three people found at each, one specific reason to reach out written down.</span></li>
+    <li><b>Tue – Thu</b><span>Outbound. Morning call blocks, short personal emails, follow-ups on anything that moved.</span></li>
+    <li><b>Friday</b><span>Advisor-channel conversations, pipeline review, and notes on what worked so the playbook gets written as I go.</span></li>
+  </ul>
+  <p class="note">Weekly activity targets are something I would set with Andy in the first two weeks, once I know what a qualified meeting looks like here.</p>
+
+  <h3>Getting a cold executive meeting</h3>
+  <ul>
+    <li><strong>Lead with them, not us.</strong> A short note to the president that shows I read their annual report or their latest announcement, names one thing I noticed, and asks for 20 minutes.</li>
+    <li><strong>Offer a point of view, not a demo.</strong> The ask is a conversation about how they find and keep their next donors. The product comes later.</li>
+    <li><strong>Go through the people they trust.</strong> Wealth advisors and estate attorneys who already refer donors to a foundation can make a warm introduction. That is a channel I know how to work.</li>
+    <li><strong>Stay with it.</strong> Executives at small and mid-size nonprofits are busy, not uninterested. A thoughtful sequence over several weeks, across phone, email, and a mutual contact, gets meetings that one email does not.</li>
+  </ul>
+</section>
+
+<section id="first-call">
+  <p class="num">03</p>
+  <h2>What a first call sounds like</h2>
+  <p>Mostly listening. Five questions I would want answered before I recommend anything.</p>
+
+  <ol class="questions">
+    <li>Where do your new donors and fundholders come from today, and how much of that runs through professional advisors?
+      <span class="why">Tells me whether the problem is finding donors, keeping them, or both.</span></li>
+    <li>When someone on your team is about to meet a donor, how do they learn about that person's capacity and connections, and how long does it take?
+      <span class="why">Tells me whether donor research is a real, felt pain or a nice-to-have.</span></li>
+    <li>What runs your fund accounting, donor-advised funds, and grants today, and what sits beside it for fundraising and relationships?
+      <span class="why">Tells me what stays in place and where Kindsight would fit next to it.</span></li>
+    <li>Who else would need to be involved to change how development works here: finance, IT, a board committee?
+      <span class="why">Tells me the shape of the buying group before I am surprised by it.</span></li>
+    <li>If nothing changes in the next twelve months, what does not get done?
+      <span class="why">Tells me whether there is a reason to act now, in their words.</span></li>
+  </ol>
+
+  <h3>The cycle I would expect</h3>
+  <p>Several stakeholders, a board that has to be comfortable, and often a formal process. I would plan for it from the first call rather than discover it at the end.</p>
+  <ol class="cycle">
+    <li><b>Discovery</b><span>The five questions above, with the development lead and ideally the president.</span></li>
+    <li><b>Value</b><span>A short written summary of what I heard and what changing it is worth to them, sent back for correction before any demo.</span></li>
+    <li><b>RFP</b><span>If they run one, I want to know early, help shape the questions honestly, and answer only what we can stand behind.</span></li>
+    <li><b>Procurement</b><span>Finance and IT review contracts, security, and how this sits next to their existing systems.</span></li>
+    <li><b>Board</b><span>The president takes it to the board or a committee. My job is to give them a clear, plain case they can present without me in the room.</span></li>
+    <li><b>Close</b><span>Signature, a clean handoff to onboarding, and a first reference conversation planned from day one.</span></li>
+  </ol>
+</section>
+
+<section id="limits">
+  <p class="num">04</p>
+  <h2>What I will not promise</h2>
+  <p>Kindsight's public pages sell a fundraising CRM and donor intelligence: ascend on Salesforce, iWave, and AI-assisted outreach. They do not show fund accounting, donor-advised-fund administration, or grants payments.</p>
+  <p>Those are the core books of a community foundation, and they usually run on systems like Foundant, NPact, or Blackbaud. So I will not tell a foundation that Kindsight replaces those systems for the books. My working assumption is that Kindsight sits beside the system of record and helps the development team raise more. If that is wrong, I would want to hear it from you before I say anything different to a prospect.</p>
+
+  <h3>Questions I would bring to you</h3>
+  <ul>
+    <li>Is Silicon Valley Community Foundation a real reference for this seat? If so, what can I say and who can a prospect talk to? If not, I will not use the name.</li>
+    <li>How does Kindsight work alongside the fund accounting systems community foundations already run, and what do current customers do in practice?</li>
+    <li>What does a good first two quarters look like to you in this seat?</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Tyler Fowler · Charleston, South Carolina</p>
+  <p>Prepared for the interview on Friday, October 9, 2026, 11:00–11:45am ET.</p>
+</footer>
+
+</div>
+</body>
+</html>
